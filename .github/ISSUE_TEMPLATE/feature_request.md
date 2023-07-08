@@ -12,6 +12,3 @@ assignees: ''
 
 **Describe alternatives you've considered**
 <!--- A clear and concise description of any alternative solutions or features you've considered. --->
-
-**Your Team Size Using TC:**
-<!--- How many team members using asdf, will help to improve the product --->

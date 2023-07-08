@@ -20,6 +20,3 @@ assignees: ''
  - OS: 
  - vscode version:
  - extension version:
-
-**Your Team Size Using asdf:**
-<!--- How many team members using asdf, will help to improve the product --->

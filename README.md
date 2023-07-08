@@ -13,7 +13,7 @@
 
 `asdf` is an extension for version management, powered by [asdf-vm](https://asdf-vm.com/guide/introduction.html). Manage each of your project runtimes with a single CLI tool and command interface.
 
-The source code is not open source. You can report any Bugs Or Feature requests here.
+The source code is not open source. You can report any bugs or feature requests here.
 
 If you find this extension useful for your projects, please consider supporting me by [Buy Me a Coffee](https://ko-fi.com/D1D2LBPX9). It's a great way to help me maintain and improve this tool in the future. Your support is truly appreciated!
 
