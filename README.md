@@ -13,13 +13,11 @@
 
 `asdf` is an extension for version management, powered by [asdf-vm](https://asdf-vm.com/guide/introduction.html). Manage each of your project runtimes with a single CLI tool and command interface.
 
-The source code is not open source. You can report any bugs or feature requests here.
+If you find this extension useful for your projects, please consider supporting me by [Patreon](https://patreon.com/nguyenngoclong), [KO-FI](https://ko-fi.com/nguyenngoclong) or [Paypal](http://paypal.com/paypalme/longnguyenngoc). It's a great way to help me maintain and improve this tool in the future. Your support is truly appreciated!
 
-If you find this extension useful for your projects, please consider supporting me by [Buy Me a Coffee](https://ko-fi.com/D1D2LBPX9). It's a great way to help me maintain and improve this tool in the future. Your support is truly appreciated!
-
-<a href='https://ko-fi.com/D1D2LBPX9' target='_blank'>
-    <img height='36' style='border:0px;height:36px;' src='https://storage.ko-fi.com/cdn/kofi3.png?v=3' border='0' alt='Buy Me a Coffee' />
-</a>
+[![KO-FI](https://img.shields.io/badge/Ko--fi-F16061?style=for-the-badge&logo=ko-fi&logoColor=white)](https://ko-fi.com/nguyenngoclong)
+[![Paypal](https://img.shields.io/badge/PayPal-00457C?style=for-the-badge&logo=paypal&logoColor=white)](http://paypal.com/paypalme/longnguyenngoc)
+[![Patreon](https://img.shields.io/badge/Patreon-F96854?style=for-the-badge&logo=patreon&logoColor=white)](https://patreon.com/nguyenngoclong)
 
 # Installation
 
@@ -96,10 +94,14 @@ To set a local package version, click the `▷` icon in the `Package Activity` s
 
 ![asdf](https://github.com/nguyenngoclongdev/cdn/raw/HEAD/images/asdf/set-local-package.gif)
 
+### Change the path of asdf executable
+
+![asdf](https://github.com/nguyenngoclongdev/cdn/raw/HEAD/images/asdf/change-executable.gif)
+
 ## Feedback
 
 If you discover a bug, or have a suggestion for a feature request, please
-submit an [issue](https://marketplace.visualstudio.com/items?itemName=nguyenngoclong.asdf&ssr=false#qna).
+submit an [issue](https://github.com/nguyenngoclongdev/vs-asdf/issues).
 
 ## LICENSE
 
