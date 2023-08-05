@@ -1,0 +1,323 @@
+{
+    "name": "asdf",
+    "displayName": "asdf - The Multiple Runtime Version Manager",
+    "description": "Manage all your runtime versions with one tool!",
+    "icon": "assets/logo.png",
+    "version": "1.1.24",
+    "main": "./dist/extension.js",
+    "browser": "./dist/web/extension.js",
+    "preview": false,
+    "qna": "marketplace",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/nguyenngoclongdev/vs-asdf"
+    },
+    "bugs": {
+        "url": "https://github.com/nguyenngoclongdev/vs-asdf/issues"
+    },
+    "sponsor": {
+        "url": "https://ko-fi.com/nguyenngoclong"
+    },
+    "homepage": "https://nguyenngoclongdev.github.io",
+    "galleryBanner": {
+        "color": "#11131C",
+        "theme": "dark"
+    },
+    "badges": [
+        {
+            "url": "https://img.shields.io/badge/Support%20this%20project-%F0%9F%92%96-green.svg?style=flat-square",
+            "href": "https://ko-fi.com/nguyenngoclong",
+            "description": "Support us!"
+        }
+    ],
+    "categories": [
+        "Other"
+    ],
+    "keywords": [
+        "asdf",
+        "asdf-vm",
+        "tool",
+        "package",
+        "plugin",
+        "version",
+        "manager",
+        "flow",
+        "ruby",
+        "python",
+        "golang",
+        "go",
+        "node",
+        "erlang",
+        "elixir",
+        "elvish",
+        ".net",
+        "ant",
+        "aws",
+        "cmake",
+        "cocoapods",
+        "dart",
+        "deno",
+        "docker",
+        "ffmpeg",
+        "firebase",
+        "gcloud",
+        "gradle",
+        "ibmcloud",
+        "java",
+        "kafka",
+        "kotlin",
+        "kube",
+        "lua",
+        "make",
+        "mongo",
+        "mysql",
+        "node",
+        "pnpm",
+        "postgres",
+        "r",
+        "powershell",
+        "redis",
+        "rust",
+        "swift",
+        "hashicorp",
+        "terraform",
+        "terragrunt",
+        "tomcat",
+        "vim",
+        "wasm",
+        "xcode"
+    ],
+    "contributes": {
+        "viewsContainers": {
+            "activitybar": [
+                {
+                    "id": "asdfActivitybar",
+                    "title": "ASDF Explorer",
+                    "icon": "assets/asdf.svg"
+                }
+            ]
+        },
+        "viewsWelcome": [
+            {
+                "view": "asdf",
+                "contents": "asdf not installed [install asdf](https://asdf-vm.com/guide/getting-started.html#_3-install-asdf)."
+            }
+        ],
+        "views": {
+            "asdfActivitybar": [
+                {
+                    "id": "asdfInfoView",
+                    "name": "Informations"
+                },
+                {
+                    "id": "asdfPluginView",
+                    "name": "Plugins"
+                },
+                {
+                    "id": "asdfPackageView",
+                    "name": "Packages"
+                }
+            ]
+        },
+        "menus": {
+            "view/title": [
+                {
+                    "command": "asdf.updateAsdf",
+                    "when": "view == asdfInfoView",
+                    "group": "navigation@1"
+                },
+                {
+                    "command": "asdf.refreshInfoView",
+                    "when": "view == asdfInfoView",
+                    "group": "navigation@2"
+                },
+                {
+                    "command": "asdf.addPlugin",
+                    "when": "view == asdfPluginView",
+                    "group": "navigation@1"
+                },
+                {
+                    "command": "asdf.updateAllPlugin",
+                    "when": "view == asdfPluginView",
+                    "group": "navigation@2"
+                },
+                {
+                    "command": "asdf.refreshPluginView",
+                    "when": "view == asdfPluginView",
+                    "group": "navigation@3"
+                },
+                {
+                    "command": "asdf.refreshPackageView",
+                    "when": "view == asdfPackageView",
+                    "group": "navigation@1"
+                }
+            ],
+            "view/item/context": [
+                {
+                    "command": "asdf.updatePlugin",
+                    "when": "view == asdfPluginView && viewItem == plugin-context",
+                    "group": "inline@1"
+                },
+                {
+                    "command": "asdf.removePlugin",
+                    "when": "view == asdfPluginView && viewItem == plugin-context",
+                    "group": "inline@2"
+                },
+                {
+                    "command": "asdf.addPackage",
+                    "when": "view == asdfPackageView && viewItem == package-context",
+                    "group": "inline@1"
+                },
+                {
+                    "command": "asdf.setGlobalPackage",
+                    "when": "view == asdfPackageView && viewItem == package-version-context",
+                    "group": "inline@1"
+                },
+                {
+                    "command": "asdf.setLocalPackage",
+                    "when": "view == asdfPackageView && viewItem == package-version-context",
+                    "group": "inline@2"
+                },
+                {
+                    "command": "asdf.removePackage",
+                    "when": "view == asdfPackageView && viewItem == package-version-context",
+                    "group": "inline@3"
+                }
+            ]
+        },
+        "commands": [
+            {
+                "command": "asdf.updateAsdf",
+                "title": "Update asdf",
+                "icon": "$(cloud-download)"
+            },
+            {
+                "command": "asdf.refreshInfoView",
+                "title": "Refresh",
+                "icon": "$(refresh)"
+            },
+            {
+                "command": "asdf.refreshPluginView",
+                "title": "Refresh",
+                "icon": "$(refresh)"
+            },
+            {
+                "command": "asdf.refreshPackageView",
+                "title": "Refresh",
+                "icon": "$(refresh)"
+            },
+            {
+                "command": "asdf.addPlugin",
+                "title": "Add plugin",
+                "icon": "$(add)"
+            },
+            {
+                "command": "asdf.updateAllPlugin",
+                "title": "Update all plugin",
+                "icon": "$(cloud-download)"
+            },
+            {
+                "command": "asdf.updatePlugin",
+                "title": "Update plugin",
+                "icon": "$(cloud-download)"
+            },
+            {
+                "command": "asdf.removePlugin",
+                "title": "Remove plugin",
+                "icon": "$(trash)"
+            },
+            {
+                "command": "asdf.addPackage",
+                "title": "Install package",
+                "icon": "$(add)"
+            },
+            {
+                "command": "asdf.removePackage",
+                "title": "Uninstall package",
+                "icon": "$(trash)"
+            },
+            {
+                "command": "asdf.setGlobalPackage",
+                "title": "Set the package global version",
+                "icon": "$(run-all)"
+            },
+            {
+                "command": "asdf.setLocalPackage",
+                "title": "Set the package local version",
+                "icon": "$(run)"
+            }
+        ],
+        "configuration": {
+            "title": "asdf",
+            "properties": {
+                "asdf.bin": {
+                    "type": "string",
+                    "default": "asdf"
+                }
+            }
+        }
+    },
+    "scripts": {
+        "vscode:prepublish": "npm run vscode-desktop:publish && npm run vscode-web:publish",
+        "vscode-desktop:publish": "npm run esbuild-base -- --minify",
+        "vscode-web:publish": "npm run compile-web -- --mode production --devtool false",
+        "esbuild-base": "esbuild ./src/extension.ts --bundle --outfile=dist/extension.js --external:vscode --format=cjs --platform=node",
+        "esbuild": "npm run esbuild-base -- --sourcemap",
+        "esbuild-watch": "npm run esbuild-base -- --sourcemap --watch",
+        "compile": "tsc -p ./",
+        "watch": "tsc -watch -p ./",
+        "lint": "eslint src --ext ts",
+        "cs": "changeset",
+        "pree2e": "code --uninstall-extension nguyenngoclong.asdf || true",
+        "e2e": "vsce package -o ./asdf.vsix",
+        "poste2e": "code --install-extension ./asdf.vsix",
+        "compile-web": "webpack",
+        "watch-web": "webpack --watch",
+        "esbuild-test": "esbuild ./src/__test__/*.ts ./src/__test__/**/*.ts --outdir=./dist/__test__ --format=cjs --platform=node",
+        "clean-test": "rm -rf src/__test__/fixtures/*.ts",
+        "pretest": "npm run clean-test && npm run esbuild && npm run esbuild-test",
+        "test": "node ./dist/__test__/runTest.js",
+        "posttest": "rm -rf .vscode-test/user-data"
+    },
+    "engines": {
+        "vscode": "^1.64.0"
+    },
+    "activationEvents": [
+        "onStartupFinished"
+    ],
+    "devDependencies": {
+        "@changesets/cli": "^2.26.1",
+        "@types/glob": "^8.1.0",
+        "@types/mocha": "^10.0.1",
+        "@types/node": "^20.2.5",
+        "@types/vscode": "^1.64.0",
+        "@types/webpack-env": "^1.18.1",
+        "@typescript-eslint/eslint-plugin": "^5.59.8",
+        "@typescript-eslint/parser": "^5.59.8",
+        "@vscode/test-electron": "^2.3.2",
+        "assert": "^2.0.0",
+        "buffer": "^6.0.3",
+        "crypto-browserify": "^3.12.0",
+        "esbuild": "^0.17.19",
+        "eslint": "^8.41.0",
+        "glob": "^10.2.6",
+        "mocha": "^10.2.0",
+        "os-browserify": "^0.3.0",
+        "path-browserify": "^1.0.1",
+        "process": "^0.11.10",
+        "stream-browserify": "^3.0.0",
+        "ts-loader": "^9.4.3",
+        "typescript": "^5.0.4",
+        "webpack": "^5.84.1",
+        "webpack-cli": "^5.1.1"
+    },
+    "dependencies": {
+        "@vscode-utility/fs-browserify": "^1.0.5"
+    },
+    "author": {
+        "name": "Nguyen Ngoc Long",
+        "url": "https://nguyenngoclongdev.github.io"
+    },
+    "publisher": "nguyenngoclong",
+    "license": "MIT"
+}

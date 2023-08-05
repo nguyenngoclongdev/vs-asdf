@@ -1,0 +1,26 @@
+name: test
+
+on:
+    push:
+        branches:
+            - develop
+
+jobs:
+    test:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v3
+            - uses: actions/setup-node@v3
+              with:
+                  node-version: 16.x
+                  cache: 'npm'
+
+            - name: Install dependency
+              run: npm ci
+
+            - name: Check style and format
+              run: npm run lint
+            - name: Test package
+              uses: coactions/setup-xvfb@v1
+              with:
+                  run: npm test
