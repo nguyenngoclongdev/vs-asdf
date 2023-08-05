@@ -1,5 +1,11 @@
 # asdf
 
+## 1.1.25
+
+### Patch Changes
+
+- 17f713a: open source asdf
+
 ## 1.1.24
 
 ### Patch Changes
