@@ -1,5 +1,11 @@
 # asdf
 
+## 1.1.26
+
+### Patch Changes
+
+- c71de0c: Change the title from ASDF Explorer to asdf Explorer
+
 ## 1.1.25
 
 ### Patch Changes
