@@ -1,6 +1,6 @@
 // https://asdf-vm.com/manage/commands.html
 export const asdf = {
-    asdfInfo: '<asdf> info', // Print OS, Shell and ASDF debug information.
+    asdfInfo: '<asdf> info', // Print OS, Shell and asdf debug information.
     asdfUpdate: '<asdf> update', // Update asdf to the latest stable release
 
     listAllPlugins: '<asdf> plugin list all', // List plugins registered on asdf-plugins repository with URLs
