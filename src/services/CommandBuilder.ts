@@ -22,8 +22,8 @@ export const asdf = {
     uninstallPackage: '<asdf> uninstall <name> <version>', // Remove a specific version of a package
     wherePackage: '<asdf> where <name> <version>', // Display install path for an installed or current version
 
-    setGlobalPackage: '<asdf> global <name> <version>', // Set the package global version, <version> || latest
-    setLocalPackage: '<asdf> local <name> <version>' // Set the package local version, <version> || latest
+    setGlobalPackage: '<asdf> set -u <name> <version>', // Set the package global version, <version> || latest
+    setLocalPackage: '<asdf> set <name> <version>' // Set the package local version, <version> || latest
 };
 
 export class CommandBuilder {
