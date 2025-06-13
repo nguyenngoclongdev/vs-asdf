@@ -1,5 +1,11 @@
 # asdf
 
+## 1.1.27
+
+### Patch Changes
+
+- e321072: Compatible with new asdf version
+
 ## 1.1.26
 
 ### Patch Changes
